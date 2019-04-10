@@ -120,6 +120,7 @@ class IncidentUpdatedNotification extends Notification
             'name'       => $this->update->incident->name,
             'new_status' => $this->update->human_status,
         ]);
+        $content .= "\n\n" . $this->update->message;
 
         $status = 'info';
 
